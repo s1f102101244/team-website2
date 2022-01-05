@@ -6,15 +6,7 @@ fortune = ['大吉', '吉', '中吉', '小吉', '末吉', '凶', '大凶']
 
 # Create your views here.
 
-def index(request):
-	return HttpResponse('Hello Django')
 
-def index1(request):
-	data = {
-		'fortune' : random.choices(fortune),
-
-    }
-	return render(request, 'teamapp/index.html', data)
 
 def index(request):
 
@@ -24,4 +16,4 @@ def index(request):
 		title = request.POST['title']
 		text = request.POST['text']
 		return HttpResponse('運勢 : {}, コメント : {}'.format(title, text))
-		
+
