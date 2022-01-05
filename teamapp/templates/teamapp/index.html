@@ -2,13 +2,35 @@
 <html lang="ja">
 
 <head>
-    <title>Template</title>
+    <title>ラッキー☆おみくじ</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
-    <h1>Hello Template</h1>
+    <h1>ラッキー☆おみくじ</h1>
+
+    
+    <h2>今日の運勢は{{ fortune }}です!</h2>
+
+
+
+    <h3>結果を共有しよう</h3>
+    <p>この下のフォームを入力する事で結果を共有することができます。</p>
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <div>
+          <label for="titleInput">結果</label>
+          <input id="titleInput" name="title" type="text" placeholder="ここに入力">
+        </div>
+        <div>
+          <label for="textInput">コメント</label>
+          <textarea id="textInput" name="text" rows="3"></textarea>
+        </div>
+        <div>
+          <button type="submit">共有</button>
+        </div>
+      </form>
 </body>
 
 </html>
