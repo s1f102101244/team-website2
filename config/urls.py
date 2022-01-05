@@ -21,5 +21,6 @@ import teamapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('teamapp/', include('teamapp.urls')),
+    path('teamapp/', teamapp.views.index1, name='teamapp'),
     path('teamapp/', teamapp.views.index, name='teamapp'),
 ]

@@ -9,9 +9,19 @@ fortune = ['大吉', '吉', '中吉', '小吉', '末吉', '凶', '大凶']
 def index(request):
 	return HttpResponse('Hello Django')
 
-def index(request):
+def index1(request):
 	data = {
-		'fortune' : random.choices(fortune)
+		'fortune' : random.choices(fortune),
+
     }
 	return render(request, 'teamapp/index.html', data)
 
+def index(request):
+
+	if request.method == 'GET':
+		return render(request, 'teamapp/index.html')
+	elif request.method == 'POST':
+		title = request.POST['title']
+		text = request.POST['text']
+		return HttpResponse('運勢 : {}, コメント : {}'.format(title, text))
+		
