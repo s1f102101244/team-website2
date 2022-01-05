@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from teamapp import views as teamapp_views
+import teamapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('teamapp/', include('teamapp.urls')),
-
+    path('teamapp/', teamapp.views.index, name='teamapp'),
 ]
