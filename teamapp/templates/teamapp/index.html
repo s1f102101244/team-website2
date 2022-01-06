@@ -1,16 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <title>ラッキー☆おみくじ</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="{% static 'teamapp/css/index.css' %}" rel="stylesheet">
 </head>
 
 <body>
+    <div class="bg_test">
     <h1>ラッキー☆おみくじ</h1>
+    <div id="header">
+        <img src="{% static 'teamapp/img/omikuji.png' %}" alt="Logo">
+    </div>
 
-    
     <h2>今日の運勢は大吉です!</h2>
 
 
@@ -31,6 +35,7 @@
           <button type="submit">共有</button>
         </div>
       </form>
+      </div>
 </body>
 
 </html>
