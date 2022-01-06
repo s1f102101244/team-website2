@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+}
+
+#header {
+    padding: 50px 100px 50px 100px;
+    height: 200px;
+}
+
+#header img {
+    height: 100%;
+}
+
+h1 {
+    color :red;
+}
+
+
+.bg_test {
+    text-align: center;
+    padding: 150px;
+    border: solid 2px;
+}
